@@ -24,6 +24,20 @@ launched it. Worth knowing:
   server that mutates a project.
 - Without a key, the server touches no network at all and answers from the
   bundled sample.
+- **Installing from a git spec runs a build on your machine.** The quickstart
+  uses `npx -y github:amitboker/anchor-mcp`, and npm runs this package's
+  `prepare` script on install. Here that script is `tsc` and nothing else —
+  you can read it in `package.json` — but it is arbitrary code execution by
+  design, and you should check that before running any git-installed package,
+  not only this one.
+
+## What the server never does
+
+Verified rather than asserted: `ANCHOR_API_KEY` is read exactly once, in
+`src/cite.ts`, and only as a boolean — `!process.env["ANCHOR_API_KEY"]`. Its
+value is never assigned to a variable, never logged, never included in a tool
+response. A canary run with a fake key set confirms it appears in neither
+stdout nor stderr across every tool.
 
 ## Supported versions
 

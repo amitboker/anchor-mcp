@@ -1,0 +1,15 @@
+# Two direct dependencies and a GitHub Actions workflow. Weekly is the right
+# cadence for a surface that small — daily would be noise, monthly would sit
+# on an advisory for three weeks.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
