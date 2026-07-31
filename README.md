@@ -1,6 +1,4 @@
-# Anchor MCP
-
-**Ask your product's own history. Get answers that cite their sources.**
+<img src="https://raw.githubusercontent.com/amitboker/anchor-mcp/main/.github/assets/banner.jpg" alt="Anchor MCP — ask your product's own history, get answers that cite their sources." width="100%">
 
 [![CI](https://github.com/amitboker/anchor-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/amitboker/anchor-mcp/actions/workflows/ci.yml)
 [![MCP](https://img.shields.io/badge/MCP-server-0d0d12)](https://modelcontextprotocol.io)
