@@ -1,0 +1,54 @@
+{
+  "name": "anchor-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Anchor \u2014 ask your product's own history and get answers that cite their sources.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "anchor-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc && chmod +x dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "dev": "tsc --watch",
+    "start": "node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "prepublishOnly": "npm run build",
+    "test": "npm run build && node scripts/smoke.mjs"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "anchor",
+    "product-management",
+    "prd",
+    "ai",
+    "llm"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitboker/anchor-mcp.git"
+  },
+  "homepage": "https://github.com/amitboker/anchor-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/amitboker/anchor-mcp/issues"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.9.0"
+  }
+}

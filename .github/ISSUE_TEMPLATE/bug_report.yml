@@ -1,0 +1,37 @@
+name: Bug report
+description: Something the server does that it should not
+labels: [bug]
+body:
+  - type: input
+    id: client
+    attributes:
+      label: MCP client
+      placeholder: Claude Code / Claude Desktop / Cursor / VS Code / Inspector
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Node and server version
+      placeholder: node 22.x, anchor-mcp 0.1.0
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Which tool, what arguments, and what came back. Paste the response.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected instead
+    validations:
+      required: true
+  - type: textarea
+    id: stderr
+    attributes:
+      label: stderr output
+      description: The server logs to stderr. Your client usually keeps it in an MCP log file.
+      render: shell

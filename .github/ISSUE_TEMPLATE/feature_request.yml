@@ -1,0 +1,23 @@
+name: Tool or feature request
+description: Something the server should be able to answer and cannot
+labels: [enhancement]
+body:
+  - type: textarea
+    id: question
+    attributes:
+      label: The question you wanted answered
+      description: Phrase it as the thing you actually asked, not as an API design.
+      placeholder: "Which decisions in this project contradict the current PRD?"
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: What would the answer be based on?
+      description: Every answer here cites sources. Which ones would this one cite?
+    validations:
+      required: true
+  - type: textarea
+    id: workaround
+    attributes:
+      label: What you do today instead
